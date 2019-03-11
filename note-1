@@ -1,0 +1,46 @@
+create-react-app objname react脚手架安装
+
+// pwa 第一次访问需要网络，第二次就不需要了 serviceWorker会将网页存储在网页内 
+import * as serviceWorker from './serviceWorker';
+
+es6新增的方法：
+    includes("str",N)：返回布尔值，表示是否找到了参数字符串。N表示搜寻的起始位置
+    startsWith("str",N)：返回布尔值，表示参数字符串是否在原字符串的头部。N表示搜寻的起始位置
+    endsWith("str",N)：返回布尔值，表示参数字符串是否在原字符串的尾部。 N表示str的长度    
+
+注意
+react和vue相似，html元素外层要有一个闭合元素包裹
+Fragment组件可以当做一个闭合标签，并且不会渲染到页面中去，类似于小程序中的<block></block>包装元素
+<></> 这个也是一个闭合的标签，并且也不会渲染到页面上去
+jsx语法中通过 {} 区分是js  <> 区分是 html  所以在jsx中可以直接在{}中写js语法
+数组可以直接渲染到页面中 [1,2,3,4] 这种的写在标签内会显示成1234
+在react中写行间样式：style = { {backgroundColor：'red'} }
+
+react中有些关键字是不合法的不能作为html元素的属性名
+   不合法的名称    替代名称 
+    class         className
+    for           htmlFor
+
+react中渲染没有for 所有循环的时候我们在{}中直接循环数据,具体方法参考案例
+渲染的时候也要给被渲染的最外层加上key，确保渲染的准确性，注意这里的key不要使用index,
+使用index  可能会造成dom重新渲染 
+react中的diff算法刷新页面的时候会将现在的页面展示和以前的进行对比，值修改变化的地方，
+使用id的时候，当改变顺序之后，diff算法会检测只改变的位置，不会操作dom
+使用index的时候,顺序改变之后，diff算法前后对比，发现以前的位置的东西改变了  所以就会删除以前的dom重新生成dom
+
+//  <p>a</p>    -> a    0
+//  <p>b</p>    -> b    1
+//  <p>c</p>    -> c    2 
+
+//  <p>c</p>    -> c    0
+//  <p>b</p>    -> b    1
+//  <p>a</p>    -> a    2
+
+vue 中v-html可以将字符串形式的标签插入到html中 v-html = {str}  底层innerHTML
+react 中也有同样的方法：dangerousSetInnerHTML = {{__html:str}} 注意当使用这个的时候，使用的这个标签里面不能有子元素
+***不建议使用这种方式插入，可能会造成xss攻击
+
+// react中的组件
+    function(无状态,无自己的this。当不需要逻辑处理的时候使用函数组件,简单组件)
+        function Components(){} 这种的可以直接执行函数，或者是<Components></Components>需要注意的是 组件标签首字母大写
+    class(类组件)
