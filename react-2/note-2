@@ -1,0 +1,7 @@
+react生命周期
+    16.3版本之后移除了三个生命周期函数：
+        componentWillUpdate
+        componentWillMount
+        componentWillReceiveProps
+    添加了两个新的声明周期函数
+        

@@ -51,7 +51,7 @@ react 中也有同样的方法：dangerousSetInnerHTML = {{__html:str}} 注意�
           对于复合类型的变量，如数组和对象，变量名不指向数据，而是指向数据所在的地址。
           const命令只是保证变量名指向的地址不变，并不保证该地址的数据不变
 
-数据校验：import PropTypes from 'prop-types'; 详情参数github中的文档介绍
+数据校验：import PropTypes from 'prop-types'; 详情参考github中的文档介绍
     安装  npm install --save-prop-types
 
 组件间的交互：两种方法
