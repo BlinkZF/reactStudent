@@ -2,7 +2,11 @@ import React from "react"
 import { render }  from "react-dom"
 import "./index.css"
 // import TagList from "./components/TagList"
-import TodoList from "./components/TodoList"
+// import TodoList from "./components/TodoList"
+// import Control from "./components/Control"
+// import UnControl from "./components/UnControl"
+// import Person from "./components/Person"
+import TodoWrapper from "./components/Wrapper/TodoWrapper"
 const topList = [
   {
     id: 0,
@@ -72,6 +76,17 @@ const topList = [
   }
 ]
   
+const person = {
+  name: '杉杉',
+  age: 18,
+  sex: '女',
+  figure: {
+    weight: 95,
+    height: 165
+  },
+  hobby: ['读书', '看报'],
+  salary: 10
+}
 // render(<TagList list = {topList}></TagList>,document.getElementById('root'))
-render(<TodoList></TodoList>,document.getElementById('root'))
+render(<TodoWrapper></TodoWrapper>,document.getElementById('root'))
 

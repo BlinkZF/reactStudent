@@ -44,3 +44,19 @@ react 中也有同样的方法：dangerousSetInnerHTML = {{__html:str}} 注意�
     function(无状态,无自己的this。当不需要逻辑处理的时候使用函数组件,简单组件)
         function Components(){} 这种的可以直接执行函数，或者是<Components></Components>需要注意的是 组件标签首字母大写
     class(类组件)
+
+复习：let和const都在块级作用域中有效
+    let：let声明的变量可以改变，值和类型都可以改变，没有限制
+    const:const一旦声明变量，就必须立即初始化，不能留到以后赋值。
+          对于复合类型的变量，如数组和对象，变量名不指向数据，而是指向数据所在的地址。
+          const命令只是保证变量名指向的地址不变，并不保证该地址的数据不变
+
+数据校验：import PropTypes from 'prop-types'; 详情参数github中的文档介绍
+    安装  npm install --save-prop-types
+
+组件间的交互：两种方法
+    1:fn fn = { this.deleteTask }
+        逐层向下传递参数
+    2：context Api传递  React.createContext() ==>执行之后产生obj(Provider\Consumer)
+        这两个是一个组件，将Provider放到传递出的文件中，将Consumer放置到接收参数的文件中
+    上面这种传地方是具体实现详情参考wrapper文件中的文件！
