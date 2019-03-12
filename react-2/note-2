@@ -4,4 +4,12 @@ react生命周期
         componentWillMount
         componentWillReceiveProps
     添加了两个新的声明周期函数
-        
+        getDerivedStateFromProps
+        getSnapshotBeforeUpdate
+
+react-router 分为2种  区别 路径不一样
+    哈希路由：HashRouter  #/
+    浏览器路由：BrowserRouter / 
+
+项目经验：将导航栏抽离成公共组件
+         将单个页面抽离成页面组件
