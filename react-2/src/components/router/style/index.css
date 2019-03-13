@@ -1,23 +1,12 @@
 body {
-    background-color: #f4f5f5;
-  }
-  
-  .nav {
-    line-height: 60px;
-    padding: 0 50px;
-    background-color: #fff;
-  }
-  
-  .content {
-    margin: 10px 70px;
-  }
-  
-  a {
-    color: #71777c;
-    margin: 0 20px;
-  }
-  
-  
-  a.active {
-    color: #007fff;
-  }
+  background-color: #f4f5f5;
+}
+
+a {
+  color: #71777c;
+}
+
+a.active {
+  color: #007fff;
+}
+@import './reset.css';

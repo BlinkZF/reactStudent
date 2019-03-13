@@ -13,3 +13,19 @@ react-router 分为2种  区别 路径不一样
 
 项目经验：将导航栏抽离成公共组件
          将单个页面抽离成页面组件
+
+router容器组件提供的三个属性： this.props:中的方法： 与vue中的相同
+    history：主要是跳转
+        go()跳转到某一页
+        goBack() 返回到来时的路
+        goForward()去到前面的路径
+        push()向当前的路径栈中添加路径
+        replace()替换当前路径
+    location:存储路径信息
+        state:状态:可以进行数据传递，但是数据传递发生在跳转的时候
+    match:看匹配的是什么
+        isExact 严格匹配
+
+Route:渲染的是页面级的组件
+
+react-router路由权限控制

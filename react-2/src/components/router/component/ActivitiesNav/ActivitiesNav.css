@@ -1,0 +1,17 @@
+.activities-nav a {
+    position: relative;
+    padding: 0 15px;
+    margin:0px;
+    font-size: 13px;
+  }
+  
+  .activities-nav a:not(:last-child)::after {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    display: inline-block;
+    content: "";
+    width: 1px;
+    height: 16px;
+    background-color: #ebebeb;
+  }
