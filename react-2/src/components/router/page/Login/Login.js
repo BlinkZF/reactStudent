@@ -1,4 +1,4 @@
-import React,{Component} from 'react'
+import React from 'react'
 import './Login.css'
 
 class Login extends  React.Component{
@@ -42,7 +42,7 @@ class Login extends  React.Component{
         if(from){
             alert('回到上一级页面！！');
         }
-        if(from == '/'){
+        if(from === '/'){
             history.push({ //将值传递回去
                 pathname:from,
                 state:{

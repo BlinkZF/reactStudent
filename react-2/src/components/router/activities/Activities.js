@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, Prompt} from 'react-router-dom';
 import ActivitiesNav from '../../components/activitiesNav/ActivitiesNav';
 
 import Recommended from './recommended/Recommended';
@@ -10,9 +10,13 @@ import Pins from './pins/Pins';
 import './style.css';
 
 class Activities extends Component {
-
   render () {
     return (
+      <>
+    <Prompt message= {(location)=>{
+      console.log(location);
+      return true;
+    }}/>
       <div className="activities">
         <ActivitiesNav></ActivitiesNav>
         <div className="content">
@@ -26,6 +30,7 @@ class Activities extends Component {
           </Switch>
         </div>
       </div>
+      </>
     )
   }
 

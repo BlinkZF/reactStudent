@@ -1,11 +1,10 @@
-import React,{Component} from 'react'
+import React from 'react'
 import './Home.css'
 
 class Home extends React.Component{
     autherInput = React.createRef()
     articleInput = React.createRef()
     componentDidMount(){
-      console.log(this.props);
       const {location} = this.props;
       const articleInfo = location.state && location.state.article;
       if(articleInfo){
@@ -15,7 +14,6 @@ class Home extends React.Component{
       }
     }
    render(){
-     console.log(this.props)
        return(
         <div className="home">
         <h4>
