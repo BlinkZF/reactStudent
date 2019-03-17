@@ -1,5 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
 import ToDoList from './components/ToDoList'
+import Counter from './components/Count'
 
-render(<ToDoList/>, window.root);
+render(<><ToDoList/><Counter/></>, window.root);
