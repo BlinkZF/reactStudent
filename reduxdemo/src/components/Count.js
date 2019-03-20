@@ -1,26 +1,23 @@
 import React,{Component} from 'react'
-import store from '../store'
-import { getCountAdd } from '../store/actions/counter'
+// import { bindActionCreators } from "redux"
+import { connect } from 'react-redux'
+import * as actions from  '../store/actions/counter'
 
-class item extends  React.Component{
-    state = store.getState().counter
-    componentDidMount(){
-        store.subscribe(()=>{ //订阅
-            this.setState(store.getState().counter)
-            // getState().counter返回的数据完全是Count组件所用到的数据，所以可以直接放在this.setState中
-        }) //监听
-    }
+class Count extends  React.Component{
    render(){
        return(
             <div>
-                {this.state.count}
+                {this.props.count}
                 <button onClick = {this.handleClike}>Add</button>
             </div>
         )
     }
     handleClike = () =>{
-        const action =  getCountAdd(3)
-        store.dispatch(action)
+        this.props.getCountAdd(6) 
     }
 }
-export default item;
+
+const  mapStateToProps = (state) => state.counter //当state中只有counter这个数据的时候，才能用这个  不然还是用下面那个
+
+export default connect(mapStateToProps, actions)(Count); 
+// redux提供的函数：bindActionCreators 绑定动作创建者。利用这个函数得到一个返回值，这个返回值就是mapDispatchToProps的一个值

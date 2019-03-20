@@ -11,3 +11,7 @@
     dispatch执行，reducer(currentState,action)处理当前dispatch后的传入的action.type并返回给currentState处理后的state，
     通过currentListeners.forEach(v=>v())执行监听函数，并最后返回当前 action状态
 
+react-redux用来连接react和redux的库，
+    提供了<provider/>这个组件。这个组件用来提供store，在需要谁用的组件外面加上这个组件，然后里面设置store
+          connect方法
+    
